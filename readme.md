@@ -14,6 +14,17 @@ Publish the configuration file
 php artisan vendor:publish --provider="Aleprosli\RepositoryPattern\RepositoryServiceProvider"
 ```
 
+## Go To 
+```config.php```
+ and import register Repository Service Provider
+
+```php
+'providers' => [
+        App\Providers\RepositoryServiceProvider::class
+    ],
+
+```
+
 ## Usage
 
 The command
@@ -27,14 +38,14 @@ php artisan make:repo Model
 php artisan make:repo User
 ```
 
-### Go To 
+## Go To 
 ```Providers/RepositoryServiceProvider.php```
  and bind interface and class you just created
 
 ```php
 <?php
 
-namespace App\Repositories;
+namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -48,7 +59,8 @@ class RepositoryServiceProvider extends ServiceProvider
 }
 
 ```
-##### And now go to your ```app/Http/Controllers/Usercontroller```
+## And now go to
+```app/Http/Controllers/Usercontroller```
 
 ```php
 <?php
@@ -60,7 +72,7 @@ use App\Repositories\UserRepositoryInterface;
 
 class UserController extends Controller
 {
-    protected $user;
+    private $user;
 
     public function __construct(UserRepositoryInterface $user)
     {
