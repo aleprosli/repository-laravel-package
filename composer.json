@@ -1,0 +1,25 @@
+{
+    "name": "aleprosli/repository-pattern",
+    "description": "This is laravel package",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Aleprosli\\RepositoryPattern\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "aleprosli",
+            "email": "aliff.rosli96@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aleprosli\\RepositoryPattern\\RepositoryServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Repositories;
+
+use App\Models\{{model}};
+
+class {{model}}Repository implements {{model}}RepositoryInterface
+{
+    public function get($id)
+    {
+        return {{model}}::find($id);
+    }
+
+    public function all()
+    {
+        return {{model}}::all();
+    }
+
+    public function delete($id)
+    {
+        {{model}}::destroy($id);
+    }
+
+    public function update($id, $data)
+    {
+        {{model}}::find($id)->update($data);
+    }
+}
