@@ -28,7 +28,7 @@ php artisan make:repo User
 ```
 
 ### Go To 
-```Repositories/RepositoryServiceProvider.php```
+```Providers/RepositoryServiceProvider.php```
  and bind interface and class you just created
 
 ```php
