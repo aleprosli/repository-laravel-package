@@ -40,7 +40,7 @@ class RepositoryPattern extends Command
     {
         $name = $this->argument('name');
 
-        RepositoryService2::create($name);
+        RepositoryService::create($name);
 
         $this->info("Successfully create repository for model ". $name);
     }
