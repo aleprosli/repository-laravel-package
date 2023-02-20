@@ -46,3 +46,35 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind('App\Repositories\UserRepositoryInterface','App\Repositories\UserRepository');
     }
 }
+
+```
+##### And now go to your ```app/Http/Controllers/Usercontroller```
+
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Repositories\UserRepositoryInterface;
+
+class UserController extends Controller
+{
+    protected $user;
+
+    public function __construct(UserRepositoryInterface $user)
+    {
+        $this->user = $user;
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        return $this->user->all();
+    }
+}
+```
