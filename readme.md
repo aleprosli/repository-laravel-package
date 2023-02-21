@@ -20,7 +20,7 @@ php artisan vendor:publish --provider="Aleprosli\RepositoryPattern\RepositorySer
 
 ```php
 'providers' => [
-        App\Providers\RepositoryServiceProvider::class
+        Aleprosli\RepositoryPattern\RepositoryServiceProvider::class
     ],
 
 ```
