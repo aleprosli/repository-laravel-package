@@ -86,7 +86,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        return $this->user->all();
+        $users = $this->user->all();
+        
+        dd($users);
     }
 }
 ```
