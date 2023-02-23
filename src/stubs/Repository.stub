@@ -18,11 +18,11 @@ class {{model}}Repository implements {{model}}RepositoryInterface
 
     public function delete($id)
     {
-        {{model}}::destroy($id);
+        return {{model}}::destroy($id);
     }
 
     public function update($id, $data)
     {
-        {{model}}::find($id)->update($data);
+        return {{model}}::find($id)->update($data);
     }
 }
